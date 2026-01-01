@@ -1,0 +1,14 @@
+# 基础配置（改这3行就行）
+title: 我的个人笔记  # 站点标题
+author: haitianyibi     # 你的名字
+description: 技术笔记/学习总结  # 站点描述
+
+# 主题（GitHub原生支持，无需额外安装）
+theme: minima  # 极简主题，适配笔记，自带目录/代码高亮
+
+# 笔记核心配置
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true  # 代码块显示行号
