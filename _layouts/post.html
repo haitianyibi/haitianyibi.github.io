@@ -1,0 +1,64 @@
+---
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ page.date | date: date_format }}
+      </time>
+      {% if page.author %}
+        â€¢ <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+    </p>
+    
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <ul class="tag-list">
+        {% for tag in page.tags %}
+        <li><span class="tag">{{ tag }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
+
+{% if site.related_posts.size > 0 %}
+<div class="related-posts">
+  <h2>相关笔记</h2>
+  <ul>
+    {% for post in site.related_posts limit: 3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if page.tags.size > 0 %}
+<div class="post-categories">
+  <h2>标签</h2>
+  <ul>
+    {% for tag in page.tags %}
+    <li><a href="/categories/#{{ tag | slugify }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

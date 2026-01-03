@@ -1,14 +1,59 @@
-# 基础配置（改这3行就行）
+# 基础配置
 title: 我的个人笔记  # 站点标题
 author: haitianyibi     # 你的名字
+email: your-email@example.com  # 你的邮箱
 description: 技术笔记/学习总结  # 站点描述
+baseurl: ""
+url: "https://haitianyibi.github.io"  # 如果使用自定义域名，替换此行
 
-# 主题（GitHub原生支持，无需额外安装）
+# 主题配置
 theme: minima  # 极简主题，适配笔记，自带目录/代码高亮
 
-# 笔记核心配置
+# Markdown 处理器配置
 markdown: kramdown
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
       line_numbers: true  # 代码块显示行号
+
+# 插件配置
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 自定义配置
+twitter_username: your_username
+github_username: haitianyibi
+
+# 分页配置（可选）
+paginate: 5
+paginate_path: "/page:num/"
+
+# 默认值配置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# 包含的目录
+include:
+  - _pages
+
+# 排除的文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

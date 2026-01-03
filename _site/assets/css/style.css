@@ -1,0 +1,263 @@
+/* 自定义样式 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 全局容器 */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 导航栏样式 */
+.site-header {
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 2rem;
+  background: #ffffff;
+}
+
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.site-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-trigger {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.trigger {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .site-header .wrapper {
+    padding: 0.6rem 0.5rem;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .trigger {
+    position: absolute;
+    top: 100%;
+    right: 0.6rem;
+    background: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    z-index: 20;
+  }
+
+  .nav-trigger:checked ~ .trigger {
+    display: flex;
+  }
+}
+
+.page-link {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.page-link:hover {
+  color: #000;
+}
+
+/* 主页 hero */
+.home .hero {
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.home .hero h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 2rem;
+}
+
+.home .hero p.lead {
+  color: #666;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.hero .hero-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  background: #0366d6;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.hero .btn.secondary {
+  background: #f0f0f0;
+  color: #222;
+}
+
+/* 文章列表卡片样式 */
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.post-list li {
+  margin: 0;
+}
+
+.post-card {
+  border: 1px solid #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: box-shadow 0.15s ease, transform 0.12s ease;
+  background: #fff;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 24px rgba(14,30,37,0.06);
+  transform: translateY(-3px);
+}
+
+.post-meta {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.post-title {
+  margin: 0.3rem 0 0.6rem 0;
+  font-size: 1.05rem;
+}
+
+.post-link {
+  text-decoration: none;
+  color: #0b3d91;
+}
+
+.post-excerpt {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* 标签样式 */
+.post-tags {
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.tag-list {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  color: #555;
+}
+
+/* 页脚样式 */
+.site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid #e8e8e8;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-col-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  margin-bottom: 1rem;
+}
+
+.feed-subscribe a {
+  display: inline-block;
+  background: #24292e;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.feed-subscribe a:hover {
+  background: #0366d6;
+}
+
+/* 代码块样式 */
+code {
+  background-color: #f8f8f8;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 700px) {
+  .page-content { padding: 0 0.5rem; }
+  .site-title { font-size: 1.1rem; }
+  .page-link { display: block; margin: 0.3rem 0; }
+  .post-list { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.5rem; }
+}
