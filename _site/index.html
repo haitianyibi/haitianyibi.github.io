@@ -23,6 +23,89 @@
       <ul class="post-list">
         <li>
           <article class="post-card">
+            <div class="post-meta">2026-01-02 10:00</div>
+            <h3 class="post-title"><a class="post-link" href="posts/2026-01-02.html">数组与链表基础</a></h3>
+            <div class="post-excerpt">数组与链表基础 一、数组（Array） 数组是一种线性数据结构，使用连续的内存空间存储相同类型的元素。   特点  随机访问：O(1) 时间复杂度 插入/删除：O(n) 时间复杂度（需要移动元素） 内存连续：缓存友好  代码示例 # Python 数组操作 arr = [1, 2, 3, 4, 5]  # 访问元素 O(1) element = arr[2]  # 值为 3  # 插入元素 O(n) arr.insert(2, 10)...</div>
+            <div class="post-tags">
+              <ul class="tag-list">
+                <li class="tag">数据结构</li>
+                <li class="tag">数组</li>
+                <li class="tag">链表</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="post-card">
+            <div class="post-meta">2026-01-03 10:00</div>
+            <h3 class="post-title"><a class="post-link" href="posts/2026-01-03.html">栈与队列详解</a></h3>
+            <div class="post-excerpt">栈与队列详解 一、栈（Stack） 栈是一种后进先出（LIFO - Last In First Out）的线性数据结构。   核心操作  push(x)：将元素压入栈顶 O(1) pop()：弹出栈顶元素 O(1) peek/top()：查看栈顶元素 O(1) isEmpty()：判断栈是否为空 O(1)  代码实现 # Python 使用列表实现栈 class Stack:     def __init__(self):...</div>
+            <div class="post-tags">
+              <ul class="tag-list">
+                <li class="tag">数据结构</li>
+                <li class="tag">栈</li>
+                <li class="tag">队列</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="post-card">
+            <div class="post-meta">2026-01-04 10:00</div>
+            <h3 class="post-title"><a class="post-link" href="posts/2026-01-04.html">哈希表原理与实现</a></h3>
+            <div class="post-excerpt">哈希表原理与实现 一、哈希表概述 哈希表（Hash Table）是一种基于键值对的数据结构，通过哈希函数将键映射到数组索引，实现近乎 O(1) 的查找、插入和删除操作。   核心概念  哈希函数：将键转换为数组索引 哈希冲突：不同的键映射到相同的索引 负载因子：元素数量 / 数组容量   二、哈希函数设计 好的哈希函数应具备：  均匀分布：减少冲突 计算高效：O(1) 时间复杂度 确定性：相同输入产生相同输出  常用哈希函数 # 整数哈...</div>
+            <div class="post-tags">
+              <ul class="tag-list">
+                <li class="tag">数据结构</li>
+                <li class="tag">哈希表</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="post-card">
+            <div class="post-meta">2026-01-05 10:00</div>
+            <h3 class="post-title"><a class="post-link" href="posts/2026-01-05.html">二叉树完全指南</a></h3>
+            <div class="post-excerpt">二叉树完全指南 一、二叉树基础 二叉树是每个节点最多有两个子节点的树形数据结构，分为左子节点和右子节点。   基本术语  根节点：树的顶部节点 叶节点：没有子节点的节点 深度：从根到该节点的边数 高度：从该节点到最远叶节点的边数 层：深度相同的节点集合  节点定义 class TreeNode:     def __init__(self, val=0, left=None, right=None):         self.val...</div>
+            <div class="post-tags">
+              <ul class="tag-list">
+                <li class="tag">数据结构</li>
+                <li class="tag">二叉树</li>
+                <li class="tag">树</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="post-card">
+            <div class="post-meta">2026-01-06 10:00</div>
+            <h3 class="post-title"><a class="post-link" href="posts/2026-01-06.html">堆数据结构详解</a></h3>
+            <div class="post-excerpt">堆数据结构详解 一、堆的概念 堆（Heap）是一种特殊的完全二叉树，满足堆性质：    最大堆：父节点值 &gt;= 子节点值 最小堆：父节点值 &lt;= 子节点值  数组表示 堆通常用数组存储，索引关系：  父节点：(i - 1) // 2 左子节点：2 * i + 1 右子节点：2 * i + 2         10              索引: [10, 8, 9, 4, 5, 6, 7]       /  \...</div>
+            <div class="post-tags">
+              <ul class="tag-list">
+                <li class="tag">数据结构</li>
+                <li class="tag">堆</li>
+                <li class="tag">优先队列</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="post-card">
+            <div class="post-meta">2026-01-07 10:00</div>
+            <h3 class="post-title"><a class="post-link" href="posts/2026-01-07.html">图论基础与算法</a></h3>
+            <div class="post-excerpt">图论基础与算法 一、图的基本概念 图（Graph）由顶点（Vertex）和边（Edge）组成，用于表示多对多的关系。   基本术语  有向图/无向图：边是否有方向 加权图：边带有权重 度（Degree）：与顶点相连的边数 入度/出度：有向图中指向/离开顶点的边数 路径：顶点序列，相邻顶点间有边 环：起点和终点相同的路径 连通图：任意两点间都有路径   二、图的表示 1. 邻接矩阵 class GraphMatrix:     def _...</div>
+            <div class="post-tags">
+              <ul class="tag-list">
+                <li class="tag">数据结构</li>
+                <li class="tag">图</li>
+                <li class="tag">算法</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="post-card">
             <div class="post-meta">2026-01-01 10:00</div>
             <h3 class="post-title"><a class="post-link" href="posts/lz77-2026-1-1.html">LZ77算法核心原理</a></h3>
             <div class="post-excerpt">LZ77算法核心原理 一、滑动窗口结构 LZ77的核心是滑动窗口，分为搜索缓冲区和前瞻缓冲区...   代码示例 # 简化版LZ77匹配逻辑 def find_longest_match(search_buf, lookahead_buf):     max_len = 0     offset = 0     for i in range(len(search_buf)):         # 匹配逻辑...     return o...</div>
